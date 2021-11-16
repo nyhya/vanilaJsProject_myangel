@@ -1,0 +1,852 @@
+<html lang="en">
+
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="text/javascript" src="js/lodash.min.js"></script>
+    <script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="js/databinding.js"></script>
+    <script type="text/javascript" src="js/d3.v4.min.js"></script>
+    <title>간편보장분석 보고서</title>
+</head>
+
+<body>
+    <div id="wrap">
+        <!-- section01 : s -->
+        <div class="sec sec01">
+            <!-- cover : s -->
+            <div class="cover">
+                <div class="logo">
+                    <img src=images/dongyang.png alt="">
+                </div>
+                <div class="titleTxt">
+                    <span class="Name" id="cusName">
+
+                    </span>님을 위한 <br>
+                    간편보장분석 보고서
+                </div>
+            </div>
+            <!-- cover : e -->
+            <!-- user info : s -->
+            <div class="userInfo">
+                <div class="emptyCon">
+                    <!-- infoBox 1 : s -->
+                    <dl class="infoBox h01">
+                        <dt class="tit">컨설턴트</dt>
+                        <dd class="info">
+                            <span id="cName"></span><br>
+                            <span class="phone" id="cPhone">
+
+                            </span>
+                        </dd>
+                        <div class="symbolCon">
+                            <div class="symbol" id="sym3"></div>
+                            <div class="symbol" id="sym2"></div>
+                            <div class="symbol" id="sym"></div>
+                        </div>
+                    </dl>
+                    <!-- infoBox 1 : e -->
+                    <!-- infoBox 2 : s -->
+                    <dl class="infoBox h02">
+                        <dt class="tit">소속</dt>
+                        <dd class="info">
+                            <span id="highGroup"></span><br>
+                            <span id="group"></span>
+                        </dd>
+                    </dl>
+                    <!-- infoBox 2 : e -->
+                    <!-- infoBox 3 : s -->
+                    <dl class="infoBox h03">
+                        <dt class="tit">분석일</dt>
+                        <dd class="info filterDate" id="standardDates">
+
+                        </dd>
+                    </dl>
+                    <!-- infoBox 3 : e -->
+                </div>
+
+            </div>
+            <!-- user info : e -->
+        </div>
+        <!-- section01 : e -->
+        <!-- section02 : s -->
+        <div class=" sec02">
+            <div class="contain">
+                <div class="bannerVertical">
+                    <img src="images/bg2.jpg" alt="" />
+                </div>
+            </div>
+
+        </div>
+        <!-- section02 : e -->
+        <!-- section03 : s -->
+        <div class="sec03">
+            <div class="contain">
+                <div class="titleBar">
+                    전체현황
+                </div>
+                <!-- customerInfo : s -->
+                <div class="customerInfo">
+                    <div class="name">
+                        <span class="empasizeTxt" id="cusName2"></span> 고객님
+                    </div>
+                    <div class="InfoDate">
+                        <div class="empTxt" id="cusAge"></div>&nbsp;
+                        <div class="empTxt">상령일&nbsp;</div>
+                        <div class="comparisonDate filterDate" id="pcaymd">&nbsp;</div>&nbsp;
+                        <div class="empTxt">분석일&nbsp;</div>
+                        <div class="AnalysisDate filterDate" id="analysisDate">&nbsp;</div>
+                    </div>
+                    <div class="descTxt">
+                        <div class="symbol">*</div>
+                        <div class="txt">상령일은 보험 가입 시 적용되는 <br>
+                            나이 기준으로 보험연령이<br>
+                            변경되는 날짜입니다.<br></div>
+
+                    </div>
+                </div>
+                <!-- customerInfo : e -->
+                <!-- insuranceInfo : s -->
+                <div class="insuranceInfo"
+                    style="position: relative; width: calc(100% - 40px); background-color: #2188da; padding: 20px 20px; display: table;">
+                    <div class="info">
+                        <div class="title">보유계약</div>
+                        <div class="txt">
+                            <span class="empTxt" id="insuranceNum"></span>
+                            <span>&nbsp;건</span>
+                        </div>
+
+                    </div>
+                    <div class="info">
+                        <div class="title">월 보험료</div>
+                        <div class="txt">
+                            <span class="empTxt filterComma" id="monthPay"></span>
+                            <span>&nbsp;원</span>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- insuranceInfo : e -->
+            </div>
+            <div class="graphCon">
+                <div class="circleGraph">
+                    <div class="title">총 <span class="emphaTxt">19</span>개 보장 중</div>
+                    <div class="one-graph"></div>
+
+                    <div class="caution">
+                        <ul class="contain" id="doughnut">
+                            <li class="redCard">
+                                <div></div>
+
+                            </li>
+                            <li class="yellowCard">
+                                <div></div>
+                            </li>
+                            <li class="GreenCard">
+                                <div></div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="barGraph">
+                    <!-- verticalGraph : s -->
+                    <div class="verticalGraph">
+                        <!-- vertical bar : s -->
+                        <div class="obj vertical01">
+                            <div class="txtcon">
+                                <div class="title">
+                                    <em>사망</em><br>
+                                    보장
+                                </div>
+                            </div>
+                            <!-- progress 높이값 %로 적용하시면 그래프 수치가 표현 됩니다 -->
+                            <span class="progress" id="graph1">
+                                <span class="bar">
+                                    <div class="icon"></div>
+
+                                </span>
+                            </span>
+                        </div>
+                        <!-- vertical bar : e -->
+                        <!-- vertical bar : s -->
+                        <div class="obj vertical02">
+                            <div class="txtcon">
+                                <div class="title">
+                                    <em>진단</em><br>
+                                    보장
+                                </div>
+                            </div>
+                            <!-- progress 높이값 %로 적용하시면 그래프 수치가 표현 됩니다 -->
+                            <span class="progress" id="graph2">
+                                <span class="bar">
+                                    <div class="icon"></div>
+                                </span>
+                            </span>
+                        </div>
+                        <!-- vertical bar : e -->
+                        <!-- vertical bar : s -->
+                        <div class="obj vertical03">
+                            <div class="txtcon">
+                                <div class="title">
+                                    <em>수술</em><br>
+                                    보장
+                                </div>
+                            </div>
+                            <!-- progress 높이값 %로 적용하시면 그래프 수치가 표현 됩니다 -->
+                            <span class="progress" id="graph3">
+                                <span class="bar">
+                                    <div class="icon"></div>
+                                </span>
+                            </span>
+                        </div>
+                        <!-- vertical bar : e -->
+                        <!-- vertical bar : s -->
+                        <div class="obj vertical04">
+                            <div class="txtcon">
+                                <div class="title">
+                                    <em>입원</em><br>
+                                    보장
+                                </div>
+                            </div>
+                            <!-- progress 높이값 %로 적용하시면 그래프 수치가 표현 됩니다 -->
+                            <span class="progress" id="graph4">
+                                <span class="bar">
+                                    <div class="icon"></div>
+                                </span>
+                            </span>
+                        </div>
+                        <!-- vertical bar : e -->
+                        <!-- vertical bar : s -->
+                        <div class="obj vertical05">
+                            <div class="txtcon">
+                                <div class="title">
+                                    <em>실손</em><br>
+                                    보장
+                                </div>
+                            </div>
+                            <!-- progress 높이값 %로 적용하시면 그래프 수치가 표현 됩니다 -->
+                            <span class="progress" id="graph5">
+                                <span class="bar">
+                                    <div class="icon"></div>
+                                </span>
+                            </span>
+                        </div>
+                        <!-- vertical bar : e -->
+                    </div>
+                    <!-- verticalGraph : e -->
+                </div>
+            </div>
+        </div>
+        <!-- section03 : e -->
+        <div class="sec04">
+            <div class="contain">
+                <div class="titleBar">
+                    보험 가입 현황
+                </div>
+                <!-- insuranceInfo : s -->
+                <div class="insuranceInfo">
+                    <div class="space spaceLeft">
+                        <div class="title"></div>
+                        <div class="info" id="insuranceNum2">
+                            <span class="em">건</span>
+                        </div>
+                    </div>
+                    <div class="space spaceRight">
+                        <div class="title"></div>
+                        <div class="info ">
+                            <span class="filterComma" id="monthPay2"></span>
+                            원
+                        </div>
+                    </div>
+                </div>
+                <!-- insuranceInfo : e -->
+                <!-- tabContants : s -->
+                <div class="tabContants">
+                    <div class="extra">*특약 버튼을 눌러 계약을 확인하세요.</div>
+                    <div id="insuranceList"></div>
+                    <!-- item list : s -->
+
+                    <!-- tabContants : e -->
+                </div>
+
+            </div>
+        </div>
+        <!-- section 04 : e  -->
+        <!-- section 05 : s -->
+        <div class="sec05">
+            <div class="contain">
+                <div class="titleBar">
+                    보장 준비 현황
+                </div>
+                <!-- banner : s -->
+                <div class="banner">
+                    <div class="layoutCon pdchange">
+
+                        <div class="emptyCon">
+                            <div class="roundBox" id="notice">
+                                <div class="txt img01">
+                                    <em>0~40%</em>
+                                </div>
+                                <div class="txt img02">
+                                    <em>41~70%</em>
+                                </div>
+                                <div class="txt img03">
+                                    <em>71% 이상</em>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </div>
+                <!-- banner : e -->
+                <div class="tableCon">
+                    <div class="extra">(단위:만원)</div>
+                    <table class="spriteTable" id="guaranteeTable">
+                        <tr>
+                            <td>
+                                <div class="rightL">구분</div>
+                            </td>
+                            <td>
+                                <div class="rightL">표준금액</div>
+                            </td>
+                            <td>
+                                <div class="rightL">준비금액</div>
+                            </td>
+                            <td>준비상태</td>
+                        </tr>
+                        <tr>
+                            <td>일반사망</td>
+                            <td class="filterComma"></td>
+                            <td class="filterComma"></td>
+                            <td class="filterComma"></td>
+                        </tr>
+                        <tr>
+                            <td>재해사망</td>
+                            <td class="filterComma"></td>
+                            <td class="filterComma"></td>
+                            <td class="filterComma"></td>
+                        </tr>
+                        <tr>
+                            <td>일반암</td>
+                            <td class="filterComma"></td>
+                            <td class="filterComma"></td>
+                            <td class="filterComma"></td>
+                        </tr>
+                        <tr>
+                            <td>소액암</td>
+                            <td class="filterComma"></td>
+                            <td class="filterComma"></td>
+                            <td class="filterComma"></td>
+                        </tr>
+                        <tr>
+                            <td>뇌출혈</td>
+                            <td class="filterComma"></td>
+                            <td class="filterComma"></td>
+                            <td class="filterComma"></td>
+                        </tr>
+                        <tr>
+                            <td>뇌혈관질환</td>
+                            <td class="filterComma"></td>
+                            <td class="filterComma"></td>
+                            <td class="filterComma"></td>
+                        </tr>
+                        <tr>
+                            <td>급성심근경색</td>
+                            <td class="filterComma"></td>
+                            <td class="filterComma"></td>
+                            <td class="filterComma"></td>
+                        </tr>
+                        <tr>
+                            <td>허혈심장질환</td>
+                            <td class="filterComma"></td>
+                            <td class="filterComma"></td>
+                            <td class="filterComma"></td>
+                        </tr>
+                        <tr>
+                            <td>LTC <br>
+                                <span class="small">(중증치매)</span>
+                            </td>
+                            <td class="filterComma"></td>
+                            <td class="filterComma"></td>
+                            <td class="filterComma"></td>
+                        </tr>
+                        <tr>
+                            <td>최소수술 <br>
+                                <span class="small">(1종)</span>
+                            </td>
+                            <td class="filterComma"></td>
+                            <td class="filterComma"></td>
+                            <td class="filterComma"></td>
+                        </tr>
+                        <tr>
+                            <td>최대수술 <br>
+                                <span class="small">(5종)</span>
+                            </td>
+                            <td class="filterComma"></td>
+                            <td class="filterComma"></td>
+                            <td class="filterComma"></td>
+                        </tr>
+                        <tr>
+                            <td>질병수술</td>
+                            <td class="filterComma"></td>
+                            <td class="filterComma"></td>
+                            <td class="filterComma"></td>
+                        </tr>
+                        <tr>
+                            <td>재해수술</td>
+                            <td class="filterComma"></td>
+                            <td class="filterComma"></td>
+                            <td class="filterComma"></td>
+                        </tr>
+                        <tr>
+                            <td>질병입원 <br>
+                                <span class="small">(1일이상)</span>
+                            </td>
+                            <td class="filterComma"></td>
+                            <td class="filterComma"></td>
+                            <td class="filterComma"></td>
+                        </tr>
+                        <tr>
+                            <td>재해입원 <br>
+                                <span class="small">(1일이상)</span>
+                            </td>
+                            <td class="filterComma"></td>
+                            <td class="filterComma"></td>
+                            <td class="filterComma"></td>
+                        </tr>
+                        <tr>
+                            <td>질병입원 <br>
+                                <span class="small">(4일이상)</span>
+                            </td>
+                            <td class="filterComma"></td>
+                            <td class="filterComma"></td>
+                            <td class="filterComma"></td>
+                        </tr>
+                        <tr>
+                            <td>재해입원 <br>
+                                <span class="small">(4일이상)</span>
+                            </td>
+                            <td class="filterComma"></td>
+                            <td class="filterComma"></td>
+                            <td class="filterComma"></td>
+                        </tr>
+                        <tr>
+                            <td>실손의료비 <br>
+                                <span class="small">(질병입원)</span>
+                            </td>
+                            <td class="filterComma"></td>
+                            <td class="filterComma"></td>
+                            <td class="filterComma"></td>
+                        </tr>
+                        <tr>
+                            <td>실손의료비 <br>
+                                <span class="small">(상해입원)</span>
+                            </td>
+                            <td class="filterComma"></td>
+                            <td class="filterComma"></td>
+                            <td class="filterComma"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <!-- section 05 : e -->
+        <!-- section 06 : s -->
+        <div class="sec06">
+            <div class="contain">
+                <div class="titleBar">
+                    분류별 보장 현황
+                </div>
+                <div class="banner">
+                </div>
+                <!-- list item : s -->
+                <div class="listCon">
+                    <!-- round box : s -->
+                    <div class="roundBox">
+                        <div class="icon"></div>
+                        <div class="txt">
+                            <div class="title">일반사망</div>
+                            <div class="diagnosis">충분</div>
+                        </div>
+                        <div class="price">
+                            10,000 <span> 만원</span>
+                        </div>
+                    </div>
+                    <!-- round box : e -->
+                    <!-- round box : s -->
+                    <div class="roundBox">
+                        <div class="icon"></div>
+                        <div class="txt">
+                            <div class="title">재해사망</div>
+                            <div class="diagnosis">부족</div>
+                        </div>
+                        <div class="price">
+                            10,000 <span> 만원</span>
+                        </div>
+                    </div>
+                    <!-- round box : e -->
+                    <div class="bannerVertical">
+                        <img src="images/bg6.jpg" alt="">
+                    </div>
+                </div>
+                <!-- list item : e -->
+            </div>
+
+        </div>
+        <!-- section 06 : e -->
+        <!-- section 07 : s -->
+        <div class="sec07">
+            <div class="contain">
+                <div class="banner">
+                    <img src="images/banner07.jpg" alt="">
+                </div>
+                <!-- list item : s -->
+                <div class="listCon">
+                    <!-- round box : s -->
+                    <div class="roundBox ">
+                        <div class="icon"></div>
+                        <div class="txt">
+                            <div class="title">일반암</div>
+                            <div class="diagnosis"></div>
+                        </div>
+                        <div class="price">
+                            10,000 <span> 만원</span>
+                        </div>
+                    </div>
+                    <!-- round box : e -->
+                    <!-- round box : s -->
+                    <div class="roundBox hide">
+                        <div class="icon"></div>
+                        <div class="txt">
+                            <div class="title">소액암</div>
+                            <div class="diagnosis"></div>
+                        </div>
+                        <div class="price">
+                            10,000 <span> 만원</span>
+                        </div>
+                    </div>
+                    <!-- round box : e -->
+                    <!-- round box : s -->
+                    <div class="roundBox">
+                        <div class="icon"></div>
+                        <div class="txt">
+                            <div class="title">뇌출혈</div>
+                            <div class="diagnosis"></div>
+                        </div>
+                        <div class="price">
+                            0 <span> 만원</span>
+                        </div>
+                    </div>
+                    <!-- round box : e -->
+                    <!-- round box : s -->
+                    <div class="roundBox">
+                        <div class="icon"></div>
+                        <div class="txt">
+                            <div class="title">뇌혈관질환</div>
+                            <div class="diagnosis"></div>
+                        </div>
+                        <div class="price">
+                            0 <span> 만원</span>
+                        </div>
+                    </div>
+                    <!-- round box : e -->
+                    <!-- round box : s -->
+                    <div class="roundBox">
+                        <div class="icon"></div>
+                        <div class="txt">
+                            <div class="title">급성심근경색</div>
+                            <div class="diagnosis"></div>
+                        </div>
+                        <div class="price">
+                            0 <span> 만원</span>
+                        </div>
+                    </div>
+                    <!-- round box : e -->
+                    <!-- round box : s -->
+                    <div class="roundBox">
+                        <div class="icon"></div>
+                        <div class="txt">
+                            <div class="title">허혈심장질환</div>
+                            <div class="diagnosis"></div>
+                        </div>
+                        <div class="price">
+                            0 <span> 만원</span>
+                        </div>
+                    </div>
+                    <!-- round box : e -->
+                    <!-- round box : s -->
+                    <div class="roundBox hide">
+                        <div class="icon"></div>
+                        <div class="txt">
+                            <div class="title">LTC(중증치매)</div>
+                            <div class="diagnosis"></div>
+                        </div>
+                        <div class="price">
+                            0 <span> 만원</span>
+                        </div>
+                    </div>
+                    <!-- round box : e -->
+                    <div class="bannerVertical">
+                        <img src="images/bg7.jpg" alt="">
+                    </div>
+                </div>
+                <!-- list item : e -->
+            </div>
+        </div>
+        <!-- section 08 : e -->
+        <div class="sec08">
+            <div class="contain">
+                <div class="banner">
+                    <img src="images/banner08.jpg" alt="">
+                </div>
+                <!-- list item : s -->
+                <div class="listCon">
+                    <!-- round box : s -->
+                    <div class="roundBox hide">
+                        <div class="icon"></div>
+                        <div class="txt">
+                            <div class="title">최소수술(1종)</div>
+                            <div class="diagnosis">충분</div>
+                        </div>
+                        <div class="price">
+                            10,000 <span>만원</span>
+                        </div>
+                    </div>
+                    <!-- round box : e -->
+                    <!-- round box : s -->
+                    <div class="roundBox hide">
+                        <div class="icon"></div>
+                        <div class="txt">
+                            <div class="title"> 최대수술(5종)</div>
+                            <div class="diagnosis">부족</div>
+                        </div>
+                        <div class="price">
+                            8,000 <span>만원</span>
+                        </div>
+                    </div>
+                    <!-- round box : e -->
+                    <!-- round box : s -->
+                    <div class="roundBox">
+                        <div class="icon"></div>
+                        <div class="txt">
+                            <div class="title">질병수술</div>
+                            <div class="diagnosis">충분</div>
+                        </div>
+                        <div class="price">
+                            10,000 <span>만원</span>
+                        </div>
+                    </div>
+                    <!-- round box : e -->
+                    <!-- round box : s -->
+                    <div class="roundBox">
+                        <div class="icon"></div>
+                        <div class="txt">
+                            <div class="title">재해수술</div>
+                            <div class="diagnosis">부족</div>
+                        </div>
+                        <div class="price">
+                            8,000 <span>만원</span>
+                        </div>
+                    </div>
+                    <!-- round box : e -->
+                    <!-- round box : s -->
+                    <div class="roundBox">
+                        <div class="icon"></div>
+                        <div class="txt">
+                            <div class="title">질병입원비(1일이상)</div>
+                            <div class="diagnosis">부족</div>
+                        </div>
+                        <div class="price">
+                            8,000 <span>만원</span>
+                        </div>
+                    </div>
+                    <!-- round box : e -->
+                    <!-- round box : s -->
+                    <div class="roundBox">
+                        <div class="icon"></div>
+                        <div class="txt">
+                            <div class="title">재해입원비(1일이상)</div>
+                            <div class="diagnosis">부족</div>
+                        </div>
+                        <div class="price">
+                            8,000 <span>만원</span>
+                        </div>
+                    </div>
+                    <!-- round box : e -->
+                    <!-- round box : s -->
+                    <div class="roundBox hide">
+                        <div class="icon"></div>
+                        <div class="txt">
+                            <div class="title">질병입원비(4일이상)
+                            </div>
+                            <div class="diagnosis">부족</div>
+                        </div>
+                        <div class="price">
+                            8,000 <span>만원</span>
+                        </div>
+                    </div>
+                    <!-- round box : e -->
+                    <!-- round box : s -->
+                    <div class="roundBox hide">
+                        <div class="icon"></div>
+                        <div class="txt">
+                            <div class="title">재해입원비(4일이상)</div>
+                            <div class="diagnosis">부족</div>
+                        </div>
+                        <div class="price">
+                            8,000 <span>만원</span>
+                        </div>
+                    </div>
+                    <!-- round box : e -->
+                    <div class="bannerVertical">
+                        <img src="images/bg8.jpg" alt="">
+                    </div>
+                </div>
+                <!-- list item : e -->
+            </div>
+        </div>
+        <!-- section 08 : e -->
+        <!-- section 09 : s -->
+        <div class="sec09">
+            <div class="contain">
+                <div class="banner">
+                    <img src="images/banner09.jpg" alt="">
+                </div>
+                <!-- list item : s -->
+                <div class="listCon">
+                    <!-- round box : s -->
+                    <div class="roundBox">
+                        <div class="icon"></div>
+                        <div class="txt">
+                            <div class="title">실손(질병입원)</div>
+                            <div class="diagnosis">충분</div>
+                        </div>
+                        <div class="price">
+                            10,000 <span>만원</span>
+                        </div>
+                    </div>
+                    <!-- round box : e -->
+                    <!-- round box : s -->
+                    <div class="roundBox">
+                        <div class="icon"></div>
+                        <div class="txt">
+                            <div class="title">실손(재해입원)</div>
+                            <div class="diagnosis">부족</div>
+                        </div>
+                        <div class="price">
+                            8,000 <span>만원</span>
+                        </div>
+                    </div>
+                    <!-- round box : e -->
+                    <div class="bannerVertical">
+                        <img src="images/bg9.jpg" alt="">
+                    </div>
+                </div>
+                <!-- list item : e -->
+            </div>
+        </div>
+        <!-- section 09 : e -->
+        <!-- section 10 : s  -->
+        <div class="sec10">
+            <div class="titleBar">
+                표준금액 대비 연령대별 보장금액
+            </div>
+            <!-- contain : s -->
+            <div class="contain">
+                <div class="desc">
+                    각 구간별 배경색에 따라 필요 금액의 보장 정도를 구분합니다. <br>
+                    보장기간에 대한 연령은 주계약 기준입니다.
+                </div>
+                <!-- roundbox : s -->
+                <div class="roundbox">
+                    <div class="obj">
+                        <div class="colorbox navy"></div>
+                        <span class="txt">71% 이상</span>
+                    </div>
+                    <div class="obj">
+                        <div class="colorbox skyBlue"></div>
+                        <span class="txt">41~70%</span>
+                    </div>
+
+                    <div class="obj">
+                        <div class="colorbox lightBlue"></div>
+                        <span class="txt">1~40%</span>
+                    </div>
+
+                    <div class="obj">
+                        <div class="colorbox gray"></div>
+                        <span class="txt">0%</span>
+                    </div>
+                </div>
+                <!-- roundbox : e -->
+                <!-- tableCon : s -->
+                <div class="tableCon">
+                    <div class="title">
+                        사망보장
+                        <span>(단위:만원)</span>
+                    </div>
+                    <table class="colorViewTable" id="deadGuarantee">
+
+                    </table>
+                </div>
+                <!-- tableCon : e -->
+                <!-- tableCon : s -->
+                <div class="tableCon">
+                    <div class="title">
+                        진단보장
+                        <span>(단위:만원)</span>
+                    </div>
+                    <table class="colorViewTable" id="diagnosisGuarantee">
+
+                    </table>
+                </div>
+                <!-- tableCon : e -->
+                <!-- tableCon : s -->
+                <div class="tableCon">
+                    <div class="title">
+                        수술보장
+                        <span>(단위:만원)</span>
+                    </div>
+                    <table class="colorViewTable" id="surgeryGuarantee">
+
+                    </table>
+                </div>
+                <!-- tableCon : e -->
+                <!-- tableCon : s -->
+                <div class="tableCon">
+                    <div class="title">
+                        입원보장
+                        <span>(단위:만원)</span>
+                    </div>
+                    <table class="colorViewTable" id="admissionGuarantee">
+
+                    </table>
+                </div>
+                <!-- tableCon : e -->
+                <!-- tableCon : s -->
+                <div class="tableCon">
+                    <div class="title">
+                        실손보장
+                        <span>(단위:만원)</span>
+                    </div>
+                    <table class="colorViewTable" id="lossGuarantee">
+
+                    </table>
+                </div>
+                <!-- tableCon : e -->
+                <div class="bannerVertical" style="margin-top: 50px;">
+                    <img src="images/bg10.jpg" alt="">
+                </div>
+            </div>
+            <!-- contain : e -->
+        </div>
+        <!-- section 10 : e -->
+    </div>
+</body>
+
+</html>

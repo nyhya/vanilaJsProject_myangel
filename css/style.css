@@ -1,0 +1,241 @@
+html, body{ }
+#wrap{ max-width: 768px; margin: 0 auto;}
+.titleBar{ width: calc(100% - 30px) ; font-size: 1.6rem; color: #FFF; font-weight: 400; background-color:#004470; padding: 10px 15px;}
+.sec{position: relative; width: 100%; height: 100%; }
+.listCon{ width: calc(100% - 30px); padding: 30px 15px;}
+.listCon .roundBox{ position: relative; padding: 15px; background-color: #f6fbfd; border: 1px #deeff6 solid; border-radius: 5px; margin-bottom: 15px;}
+.listCon .roundBox .icon{ width: 30px; height: 30px; display: inline-block; background-image: url(../images/table-green.png); background-size: contain; background-repeat: no-repeat; background-position: 0 0; }
+.listCon .roundBox .icon.green{ background-image: url(../images/table-green.png); }
+.listCon .roundBox .icon.yellow{ background-image: url(../images/table-yellow.png);}
+.listCon .roundBox .icon.red{ background-image: url(../images/table-red.png);}
+.listCon .roundBox .txt{ display: inline-block; margin-left: 25px; }
+.listCon .roundBox .txt .title{ font-size: 1.6rem; letter-spacing: -0.5px; font-weight: 400; color: #303334; line-height: 1.9rem;}
+.listCon .roundBox .txt .diagnosis{ font-size: 1.3rem; color: #29c7cc; line-height: 1.7rem;}
+.listCon .roundBox .txt .diagnosis.red{ color: #ff4606;}
+.listCon .roundBox .txt .diagnosis.yellow{ color: #ffb850;}
+.listCon .roundBox .txt .diagnosis.green{ color: #29c7cc; }
+.listCon .roundBox .price{ position: absolute; right: 15px; display: inline-block; font-size: 2.0rem; color: #303334; font-weight: 400; letter-spacing: -0.5px;}
+.listCon .roundBox .price span{ font-size: 1.6rem;}
+.listCon .bannerVertical{}
+.listCon .bannerVertical img{ width: 100%;}
+
+.printBtn{ }
+
+
+/* table 배경 컬러 */
+.skyBlue{ background-color: #009edc !important; color: #FFF !important;}
+.navy{ background-color: #004470; }
+.lightBlue{ background-color:#77caed }
+.gray{ background-color:#ebf1f5; color: #004470 !important; }
+.hide{ display: none;}
+
+/* 1 페이지 */
+.sec01{ min-height: 640px; }
+.sec01 .cover{ position: relative; width: 100%; height: 66.7166417%; /*padding-bottom:118.518519% ; */background-image: url(../images/cover-illust01.png); background-size:83.3333333% auto; background-color:#56aef5; background-repeat: no-repeat; background-position: right bottom; border-bottom: 1px #1a86cc solid;}
+.sec01 .cover .titleTxt .name{ color: #FFF; font-size: 3rem; letter-spacing: -1px; line-height: 3.2rem; font-weight: 400; }
+.sec01 .cover .titleTxt{ padding-top: 23.3333333%; padding-left: 27px; color: #FFF; font-size: 3rem; line-height: 3.2rem; font-weight: 400; letter-spacing: -1px;}
+.sec01 .cover .logo{ position: absolute; right:4.72222222%; margin-top: 9%; width: 20%; }
+.sec01 .cover .logo img{ width: 100%;}
+.sec01 .userInfo{ position: relative; width: 100%; height: calc( 100% - 66.7166417% );  /*padding-bottom: 58.9833333%;*/}
+.sec01 .userInfo .emptyCon{ position: absolute; left: 0; top: 0; width: 100%; height: 100%;}
+.sec01 .userInfo .infoBox:last-child{ box-shadow: none;}
+.sec01 .userInfo .infoBox{ position: relative; width: calc(100% - 40px); display: table; box-shadow: inset 0 -1px 0  #aac1cf; padding: 0px 20px;}
+.sec01 .userInfo .infoBox.h01{ height:40%; }
+.sec01 .userInfo .infoBox.h02{ height: 30%; }
+.sec01 .userInfo .infoBox.h03{ height: 30%; }
+.sec01 .userInfo .tit{ width: 27%; display: table-cell; vertical-align: middle; font-size: 1.6rem; color: #004470; }
+.sec01 .userInfo .info{ display: table-cell; vertical-align: middle; line-height: 2rem; font-size: 1.67rem; color: #004470;}
+.sec01 .userInfo .info #cName{ color: #004470; }
+.sec01 .userInfo .info #highGroup{ color: #004470; } 
+.sec01 .userInfo .info #group{ color: #004470; } 
+.sec01 .userInfo .info .phone{ font-size: 1.5rem; color: #004470; }
+.sec01 .userInfo .symbolCon{ height: 100%; display: table-cell; vertical-align: middle; text-align: right;}
+.sec01 .userInfo .symbolCon .symbol{ width: 35px; height: 35px; display: inline-block; margin-right: 3px; background-image:none; background-size: contain; background-repeat: no-repeat; background-position: center;}
+.sec01 .userInfo .symbolCon .symbol:last-child{ margin-right: 0px; }
+.sec01 .userInfo .symbolCon .superb{ background-image: url(../images/symbol02.png);  }
+.sec01 .userInfo .symbolCon .mdrt{ background-image: url(../images/symbol01.png); }
+
+/* 2 페이지 */
+.sec02{}
+.sec02 .contain{ width: calc( 100% - 30px); padding: 15px;}
+.sec02 .bannerVertical{width: 100%; }
+.sec02 .bannerVertical img{ width: 100%;}
+
+/* 3 페이지 */
+.sec03{}
+.sec03 .contain .customerInfo{ padding: 24px 20px 20px 20px; background-color:#56aef5; background-image: url(../images/img03-1.png); background-size: 50%; background-position: right bottom; background-repeat: no-repeat; }
+.sec03 .contain .customerInfo .name .empasizeTxt{ color: #FFF; font-size: 3.0rem; line-height: 3.2rem; font-weight: 400; letter-spacing: -2px;}
+.sec03 .contain .customerInfo .name{ color: #FFF; font-size:2.0rem; font-weight: 600; margin-bottom: 3px;}
+.sec03 .contain .customerInfo .InfoDate{ display: table; }
+.sec03 .contain .customerInfo .InfoDate div{ color: #0664b0; display: table-cell; line-height: 1.6rem; vertical-align: middle; font-size: 1.4rem; letter-spacing: -0.5px; font-weight: 200;}
+.sec03 .contain .customerInfo .descTxt{ color: #FFF; font-size:1.2rem; font-weight: 100; line-height: 1.5rem; letter-spacing: -0.1px; margin-top: 40px;}
+.sec03 .contain .customerInfo .descTxt div{ display: inline-block; vertical-align: top; color: #FFF; font-size:1.2rem; font-weight: 100; line-height: 1.5rem; letter-spacing: -0.1px; }
+.sec03 .contain .customerInfo .descTxt
+.sec03 .contain .insuranceInfo{ position: relative; width: calc(100% - 40px); background-color: #2188da; padding: 20px 20px; display: table;} 
+.sec03 .contain .insuranceInfo .info{ position: relative; width: 100%; font-size: 1.6rem; color: #FFF; }
+.sec03 .contain .insuranceInfo .info *{ width: 50%;}
+.sec03 .contain .insuranceInfo .info div{ display: table-cell; }
+.sec03 .contain .insuranceInfo .info .title{ width: 100%; display: table-cell; vertical-align: middle; color: #FFF; }
+.sec03 .contain .insuranceInfo .info:first-child span:last-child{display: table-cell; vertical-align: middle; }
+.sec03 .contain .insuranceInfo .info .txt{ vertical-align: middle; }
+.sec03 .contain .insuranceInfo .info .txt span{ color: #FFF; display: table-cell; vertical-align: middle; }
+.sec03 .contain .insuranceInfo .info .txt .empTxt{ font-size: 1.67rem; display: table-cell; vertical-align: middle; }
+.sec03 .graphCon{ width: calc(100% - 40px); padding: 20px; padding-bottom: 80px; }
+.sec03 .graphCon .circleGraph{  border-radius: 10px; border: 1px #c9e5fb solid; background-color: #f0f8fe; }
+.sec03 .graphCon .circleGraph .graphCon{ max-width: 375px;}
+.sec03 .graphCon .circleGraph .title{ margin-top: 25px; text-align: center; font-size: 2.0rem; color:#004470; letter-spacing: -1px; font-weight: 600;}
+.sec03 .graphCon .circleGraph .title .emphaTxt{ color:#009edc; }
+.sec03 .graphCon .circleGraph .caution{ width: 100%; height: 130px;}
+.sec03 .graphCon .circleGraph .caution .contain{ text-align: center;}
+.sec03 .graphCon .circleGraph .caution .contain li{ position: relative; width: 45px; max-width: 45px; height: 100px; text-align: center; display: inline-block; background-repeat: no-repeat; background-image: url(../images/redcard.png); background-size: contain; background-position: top center; margin-right: 17%; }
+.sec03 .graphCon .circleGraph .caution .contain li.redCard{ background-image: url(../images/redcard.png);}
+.sec03 .graphCon .circleGraph .caution .contain li.yellowCard{ background-image: url(../images/yellowcard.png); }
+.sec03 .graphCon .circleGraph .caution .contain li:last-child{ margin-right: 0px; background-image: url(../images/greencard.png); }
+.sec03 .graphCon .circleGraph .caution .contain li div{position: absolute; bottom:0; width: 100%; letter-spacing: -1px; font-size: 20px; color:#004470; text-align: center; font-weight: 600;}
+.sec03 .graphCon .verticalGraph{ width: calc( 100% - 60px); display: table; text-align: center; padding: 0px 30px; margin-top: 80px;  }
+.sec03 .graphCon .verticalGraph .obj { position: relative;display: table-cell;width: 10.4477612%; height: 174px;text-align: center;vertical-align: bottom;}
+.sec03 .graphCon .verticalGraph .obj:last-child{ margin: 0;}
+.sec03 .graphCon .verticalGraph .obj.vertical01 .progress{ height:100%; width: 24px; margin: 0 auto;}
+.sec03 .graphCon .verticalGraph .obj.vertical02 .progress{ height:80%; width: 24px; margin: 0 auto;}
+.sec03 .graphCon .verticalGraph .obj.vertical03 .progress{ height:60%; width: 24px; margin: 0 auto;}
+.sec03 .graphCon .verticalGraph .obj.vertical04 .progress{ height:30%; width: 24px; margin: 0 auto;}
+.sec03 .graphCon .verticalGraph .obj.vertical05 .progress{ height:90%; width: 24px; margin: 0 auto;}
+.sec03 .graphCon .verticalGraph .obj .progress {position: relative;height: 10%; min-height: 10%; display: block;width: 100%;max-height: 100%;}
+.sec03 .graphCon .verticalGraph .obj .progress .bar {position: absolute;left: 0%;background: #8cbdfa;display: block; width: 24px;height: 100%;border-radius: 5px; z-index: 1;}
+.sec03 .graphCon .verticalGraph .obj .progress .bar.red{ background-color: #ff4606;}
+.sec03 .graphCon .verticalGraph .obj .progress .bar.green{ background-color: #29c7cc; }
+.sec03 .graphCon .verticalGraph .obj .progress .bar.yellow{ background-color: #ffb850;}
+.sec03 .graphCon .verticalGraph .obj .progress .bar .icon{ position: absolute; left: 50%; top: -50px; width: 200%; height: 0;  padding-bottom: 160%; transform: translateX(-50%); background-image: url(../images/noticeIcon-red.png); background-position: center top; background-size: contain; background-repeat: no-repeat;}
+.sec03 .graphCon .verticalGraph .obj .progress .bar .icon.green{ background-image: url(../images/noticeIcon-green.png); }
+.sec03 .graphCon .verticalGraph .obj .progress .bar .icon.yellow{ background-image: url(../images/noticeIcon-yellow.png); }
+.sec03 .graphCon .verticalGraph .obj .progress .bar .icon.red{ background-image: url(../images/noticeIcon-red.png); }
+.sec03 .graphCon .verticalGraph .obj .txtcon{ position: absolute; left: 50%; top: 182px; transform: translateX(-50%); width: 35px; height: 20%;}
+.sec03 .graphCon .verticalGraph .obj .txtcon .title{position: absolute;  left: 50%; transform: translateX(-50%); top: 0px; width: 150%; height: 100%; color:#004470; font-size: 1.5rem; line-height: 1.6rem;}
+.sec03 .graphCon .verticalGraph .obj .txtcon .title em{ font-weight: 600; color:#004470; }
+
+
+/* 4 페이지 */
+
+.sec04{}
+.sec04 .contain .insuranceInfo{ position: relative; width: calc(100% - 50px) ; padding: 25px; background-color: #56aef5; line-height: 0; font-size: 0; box-shadow: inset 0px -1px 0px #0f80ca;}
+.sec04 .contain .insuranceInfo .space{ width: 100%; display: table; padding-bottom: 15px; }
+.sec04 .contain .insuranceInfo .space:last-child{ padding-bottom: 0px;}
+.sec04 .contain .insuranceInfo .space .info{ width: 50%; text-align: right; display: table-cell; vertical-align: middle; font-size: 2.4rem; font-weight: 600; color: #FFF; }
+.sec04 .contain .insuranceInfo .space .info *{ color: #FFF;}
+.sec04 .contain .insuranceInfo .space .title{ width: 50%; height: 30px; display: table-cell; background-image: url(../images/title04-01.png); background-position: left center; background-size: contain; background-repeat: no-repeat; }
+.sec04 .contain .insuranceInfo .spaceLeft .title{ background-image: url(../images/title04-01.png);  }
+.sec04 .contain .insuranceInfo .spaceRight .title{ background-image: url(../images/title04-02.png);  }
+.sec04 .contain .tabContants{ position: relative; width: calc(100% - 30px); padding: 15px ;}
+.sec04 .contain .tabContants .extra{ font-size: 12px; font-weight: 100; color: #004470; margin-bottom: 10px; }
+.sec04 .contain .tabContants .tabInfo{ position: relative; background-color:#f6fbfd; border-radius: 5px; border: 1px #d4edf6 solid; padding-bottom:45px; padding-top: 15px; margin-bottom: 25px;}
+.sec04 .contain .tabContants .tabInfo .companyName{ font-size: 1.2rem; font-weight: 100; color: #48535b; padding-left:15px ; }
+.sec04 .contain .tabContants .tabInfo .prodectName{ font-size: 1.6rem; color: #333333; overflow: hidden; white-space: nowrap; padding: 0px 15px 15px 15px; font-weight: 600; text-overflow: ellipsis; word-break: break-word; box-shadow: 0px 1px 0px #cdd0d1;}
+.sec04 .contain .tabContants .tabInfo .prodectName.on{  white-space: normal; }
+.sec04 .contain .tabContants .tabInfo .dateInfo{ position: relative; padding: 0px 15px;}
+.sec04 .contain .tabContants .tabInfo .dateInfo .dateCon{ display: inline-block; margin-right: 20px; margin-top: 15px; padding-bottom:22px ;}
+.sec04 .contain .tabContants .tabInfo .dateInfo .dateCon:last-child{ position: absolute; right: 0;}
+.sec04 .contain .tabContants .tabInfo .dateInfo .dateCon .title{ font-size: 1.2rem; color:#48535b; font-weight: 200; }
+.sec04 .contain .tabContants .tabInfo .dateInfo .dateCon .date{  font-size: 1.4rem; color: #004470; letter-spacing: -0.5px; }
+.sec04 .contain .tabContants .tabInfo .dateInfo .dateCon .date *{ color: #004470; }
+.sec04 .contain .tabContants .tabInfo .dateInfo .dateCon:last-child .date{ font-weight: 400;}
+.sec04 .contain .tabContants .tabInfo .insurenceList{ display: none; }
+.sec04 .contain .tabContants .tabInfo .insurenceList.on{ display: block; background-color: #e9f9ff;  border-top: 1px #d4edf6 solid; padding: 20px 15px;}
+/* 2021-01-08 추가 */
+/* .sec04 .contain .tabContants .tabInfo .insurenceList .titleArea{} */
+.sec04 .contain .tabContants .tabInfo .insurenceList .titleArea *{ display: inline-block; padding-bottom: 15px; color: #333333; font-size: 1.5rem;}
+.sec04 .contain .tabContants .tabInfo .insurenceList .titleArea .tit{ width: 70%; text-align: center;}
+.sec04 .contain .tabContants .tabInfo .insurenceList .titleArea .payment{ width: 30%; text-align: right;}
+.sec04 .contain .tabContants .tabInfo .insurenceList .item{ width: 100%; padding-bottom: 5px;  font-weight: 200; letter-spacing: -0.5px;  }
+.sec04 .contain .tabContants .tabInfo .insurenceList .item:last-child{ padding:0;}
+/* .sec04 .contain .tabContants .tabInfo .insurenceList .item .title{ width: 70%; height: 17px; vertical-align: top; line-height: 17px;  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;   display: inline-block; font-size: 1.5rem; color: #667177; } */
+.sec04 .contain .tabContants .tabInfo .insurenceList .item .price{ width: 30%; height: 17px; text-align: right; vertical-align: top; line-height: 17px; display: inline-block;  font-size: 1.5rem; color: #667177; font-weight: 400; }
+.sec04 .contain .tabContants .tabInfo .toggleBtn{ position: absolute; left: 0; bottom: 0; width: 100%; height: 45px; background-color: #009edc; color: #FFF; font-size: 16px; font-weight: 400; border-bottom-left-radius: 5px; border-bottom-right-radius: 5px; text-align: center; line-height: 45px; background-image: url(../images/allowDown.png); background-size: auto 22%; background-repeat: no-repeat; background-position: 95% center}
+.sec04 .contain .tabContants .tabInfo .toggleBtn.on{ background-image: url(../images/allowUp.png); }
+/* 5 페이지 */
+@media (min-width: 768px) and (max-width: 1024px) {
+    html{ font-size: 11px;}
+    .sec04 .contain .tabContants .tabInfo .insurenceList .item .title{ height: 22px; line-height: 22px; }
+    .sec04 .contain .tabContants .tabInfo .insurenceList .item .price{ height: 22px; line-height: 22px; }
+    .sec05 .contain .banner .layoutCon.pdchange{ width: calc( 100% - 80px); padding: 20px 40px !important;}
+    .sec05 .contain .banner .layoutCon .emptyCon .roundBox .txt em{ left: 22.5% !important; font-size: 1.15rem !important;}
+}
+@media (min-width: 600px) and (max-width: 767px) {
+    .sec05 .contain .banner .layoutCon .emptyCon .roundBox .txt em{ font-size: 1.5rem !important;}
+}
+.sec05 .contain .banner{ position: relative; width: 100%; height:0; padding-bottom: 57.983963%;}
+.sec05 .contain .banner .layoutCon{ position: absolute; left: 0; top:0; width: calc(100% - 40px);  height: calc(100% - 40px); padding: 20px; background-image: url(../images/banner05.jpg); background-repeat: no-repeat; background-size: contain;}
+.sec05 .contain .banner .layoutCon .title{ font-size: 2.0rem; color: #FFF; font-weight: 600; padding-bottom: 10px;}
+.sec05 .contain .banner .layoutCon .emptyCon{ position: relative; width: calc( 63.5% - 30px); max-width: 250px; height:79%; max-height: 165px;  /*padding-bottom: 42%;*/ border-radius: 5px; background-color: #FFF; margin-top: 11%; }
+.sec05 .contain .banner .layoutCon .emptyCon .roundBox{ position: absolute; left: 0; top: 0; width: calc( 100% - 30px); height: calc( 100% - 30px);  padding: 15px; }
+.sec05 .contain .banner .layoutCon .emptyCon .roundBox .txt{ position: relative; width: 100%; height: calc( (100% / 3) - 8px); max-height:45px; font-size: 1.6rem; text-align: right; background-repeat: no-repeat; background-position: left top; background-size: auto 100%; margin-bottom: 12px; color: #004470; }
+.sec05 .contain .banner .layoutCon .emptyCon .roundBox .img01{ background-image: url(../images/red05.png); }
+.sec05 .contain .banner .layoutCon .emptyCon .roundBox .img02{  background-image: url(../images/yellow05.png); }
+.sec05 .contain .banner .layoutCon .emptyCon .roundBox .img03{  background-image: url(../images/green05.png); margin: 0;}
+.sec05 .contain .banner .layoutCon .emptyCon .roundBox .txt em{ position: absolute; left: 25%; bottom: -5px; color: #727272; font-weight: 200; font-size: 1.2rem;}
+.sec05 .contain .tableCon{ padding: 15px;}
+.sec05 .contain .tableCon .extra{ font-size: 1.2rem; color: #727272; text-align: right; font-weight: 100; margin-bottom: 10px;}
+.sec05 .contain .tableCon .spriteTable{ width: 100%; border-collapse:collapse}
+.sec05 .contain .tableCon .spriteTable tr{ border-bottom: 1px #30688c solid;}
+.sec05 .contain .tableCon .spriteTable tr:nth-child(even){ background-color: #eef7fe;}
+.sec05 .contain .tableCon .spriteTable tr:nth-child(odd){ background-color: #d4e6f5;}
+.sec05 .contain .tableCon .spriteTable tr:first-child{ font-size: 1.2rem; color: #004470; font-weight: 400;  text-align: center; background-color: #FFF; border-top:1px #004470 solid ; }
+.sec05 .contain .tableCon .spriteTable tr:first-child td{ position: relative; height: 34px; vertical-align: middle; padding: 0; font-size: 1.25rem; color: #004470; text-align: center; }
+.sec05 .contain .tableCon .spriteTable tr:first-child td:first-child{ width: 35%; padding: 5px 0px; }
+.sec05 .contain .tableCon .spriteTable tr:first-child td:nth-child(2){ width: 21.6666667%;}
+.sec05 .contain .tableCon .spriteTable tr:first-child td:nth-child(3){ width: 21.6666667%;}
+.sec05 .contain .tableCon .spriteTable tr:first-child td:last-child{ width: 21.6666667%; background: transparent }
+.sec05 .contain .tableCon .spriteTable tr:first-child td .rightL{ color: #004470; border-right: 1px #004470 solid;}
+.sec05 .contain .tableCon .spriteTable tr td{ line-height: 1.6rem; font-size: 1.4rem; color: #48535b; text-align: right; height: 40px; vertical-align: middle; padding-right: 15px; }
+.sec05 .contain .tableCon .spriteTable tr td:first-child{ text-align: center; padding: 0;}
+.sec05 .contain .tableCon .spriteTable tr td span.small{ font-size: 1.2rem; font-weight: 100; color: #48535b; text-align: center;}
+.sec05 .contain .tableCon .spriteTable tr td:last-child{ background-image:none; background-size: 20px; background-repeat: no-repeat; background-position: center;}
+.sec05 .contain .tableCon .spriteTable tr td:last-child.red{ background-image: url(../images/table-red.png); }
+.sec05 .contain .tableCon .spriteTable tr td:last-child.yellow{ background-image: url(../images/table-yellow.png); }
+.sec05 .contain .tableCon .spriteTable tr td:last-child.green{ background-image: url(../images/table-green.png); }
+/* 6 페이지 */
+.sec06 .contain .banner{ width: 100%; height: 0; padding-bottom: 25.462963%; background-image: url(../images/banner06.jpg); background-repeat: no-repeat; background-size: contain; background-position: 0 0;}
+/* 7 페이지 */
+.sec07 .contain .banner img{width: 100%;}
+/* 8 페이지 */
+.sec08 .contain .banner img{width: 100%;}
+/* 9 페이지 */
+.sec09 .contain .banner img{width: 100%;}
+/* 10 페이지 */
+.sec10 .contain{ padding: 34px 15px 15px 15px;  }
+.sec10 .contain .desc{ font-size: 1.4rem; color: #48535b; letter-spacing: -0.5px; }
+.sec10 .contain .roundbox{ width: 100%; padding: 15px 0px; border: 1px #eff7fe solid; border-radius: 10px; line-height: 0; font-size: 0; margin-top: 20px;}
+.sec10 .contain .roundbox .obj{ width: calc(50% - 36px) ; display: inline-block; padding-left: 36px; }
+.sec10 .contain .roundbox .obj:first-child{ margin-bottom: 15px;}
+.sec10 .contain .roundbox .obj:nth-child(2){ margin-bottom: 15px;}
+.sec10 .contain .roundbox .obj .colorbox{ width: 34px; height: 15px; display: inline-block; vertical-align: middle;}
+.sec10 .contain .roundbox .obj .txt{ margin-left: 10px; font-size: 1.2rem; color: #48535b; line-height: 15px; vertical-align: middle; font-weight: 200;}
+.sec10 .contain .tableCon{ width: 100%; margin-top: 30px; }
+.sec10 .contain .tableCon .title{ position: relative; font-size: 2.0rem; color: #27313a; font-weight: 400; letter-spacing: -1px; line-height: 2.2rem; padding: 10px 0px; }
+.sec10 .contain .tableCon .title span{float: right;  font-size: 1.3rem; letter-spacing: 0.5; line-height: 2.2rem; color: #727272; font-weight: 100;}
+.sec10 .contain .tableCon .colorViewTable{ border-collapse: collapse; width: 100%;}
+.sec10 .contain .tableCon .colorViewTable tr:first-child td{  position: relative; height:30px;  background-color: #FFF; font-size: 1.3rem; color: #004470; text-align: center; padding: 5px 0px;  font-weight: 400; letter-spacing: -0.5px; border-top: 1px #11507a solid;  border-bottom: 1px #006294 solid;}
+.sec10 .contain .tableCon .colorViewTable tr:first-child td:last-child::after{ display: none;}
+.sec10 .contain .tableCon .colorViewTable tr:first-child td:first-child{ width: 28%; box-shadow: inset 1px 0px 0px transparent; }
+.sec10 .contain .tableCon .colorViewTable tr:first-child td:nth-child(2){ width: 18%;}
+.sec10 .contain .tableCon .colorViewTable tr:first-child td:nth-child(3){ width: 18%;}
+.sec10 .contain .tableCon .colorViewTable tr:first-child td:nth-child(4){ width: 18%;}
+.sec10 .contain .tableCon .colorViewTable tr:first-child td:last-child{width: 18%;  }
+.sec10 .contain .tableCon .colorViewTable tr:first-child td .lineRight{ border-right: 1px#a5bdcd solid; }
+.sec10 .contain .tableCon .colorViewTable tr:first-child td *{ color: #004470; }
+.sec10 .contain .tableCon .colorViewTable tr td{  height: 42px; vertical-align: middle; line-height: 1.6rem; font-weight: 200;  box-shadow: inset 1px 0px 0px #FFF, inset 0px -1px 0px #FFF;   font-size: 1.4rem; color:#FFF;  text-align: center;   }
+.sec10 .contain .tableCon .colorViewTable tr td:first-child{  color: #48535b; box-shadow: inset -1px 0px 0px #FFF;  }
+.sec10 .contain .tableCon .colorViewTable tr td:nth-child(2){ box-shadow: inset 0px -1px 0px #FFF; }
+.sec10 .contain .tableCon .colorViewTable tr:nth-child(odd){ background-color:#d4e6f5;}
+.sec10 .contain .tableCon .colorViewTable tr:nth-child(even){ background-color:#eef7fe ;}
+.sec10 .contain .tableCon .colorViewTable tr:last-child{ border-bottom: 1px #006294 solid;}
+.sec10 .contain .tableCon .colorViewTable tr:last-child td{ box-shadow: none}
+.sec10 .contain .tableCon .colorViewTable tr:last-child td:first-child{ box-shadow: inset -1px 0px 0px #FFF, inset -1px 0px 0px #FFF !important;}
+.sec10 .contain .tableCon .colorViewTable tr:last-child td:nth-child(3){box-shadow: inset 1px 0px 0px #FFF !important;}
+.sec10 .contain .tableCon .colorViewTable tr:last-child td:nth-child(4){box-shadow: inset 1px 0px 0px #FFF !important;}
+.sec10 .contain .tableCon .colorViewTable tr:last-child td:last-child{ box-shadow: inset 1px 0px 0px #FFF !important; }
+.sec10 .contain .bannerVertical{ width: 100%;}
+.sec10 .contain .bannerVertical img{ width: 100%;}
+
+
+/* 2021-02-02 */
+.sec04 .contain .tabContants .tabInfo .insurenceList .item .title{ width: 70%; vertical-align: top; display: inline-block; font-size: 1.5rem; color: #667177; }
